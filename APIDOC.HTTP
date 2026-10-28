@@ -1,0 +1,151 @@
+### Get all cakes
+GET http://127.0.0.1:8000/cake/
+
+### Creating a cake
+
+POST http://127.0.0.1:8000/cake/
+Authorization: Token 24705351d98da762c254a724df19573df58e5a4c
+Content-Type: multipart/form-data; boundary=abcd
+
+--abcd
+Content-Disposition: form-data; name="name"
+
+Arri Cake
+--abcd
+Content-Disposition: form-data; name="description"
+
+Sweety Yummy Rich in Nuts Cake 3
+--abcd
+Content-Disposition: form-data; name="category"
+
+1
+--abcd
+Content-Disposition: form-data; name="weight"
+
+1
+--abcd
+Content-Disposition: form-data; name="shape"
+
+1
+--abcd
+Content-Disposition: form-data; name="price"
+
+1250
+--abcd
+Content-Disposition: form-data; name="photo"; filename="vanila.jpg"
+Content-Type: image/jpeg
+
+< C:/Users/Pavithran S/Pictures/Untitled.png
+--abcd--
+
+### Retrieve a cakes
+GET http://127.0.0.1:8000/cake/1/
+
+### Update a cake
+PATCH http://127.0.0.1:8000/cake/4/
+Content-Type: multipart/form-data; boundary=abcd
+
+--abcd
+Content-Disposition: form-data; name="shape"
+
+2
+--abcd--
+
+### delete a record
+DELETE http://127.0.0.1:8000/cake/3/
+
+### get auth token
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "password":"admin"
+}
+
+### Get all Category
+GET http://127.0.0.1:8000/category/
+
+### Create a Category
+POST http://127.0.0.1:8000/category/
+Content-Type: application/json
+
+{
+    "name" : "Wedding Cake"
+}
+
+### Retrieve a Category
+GET http://127.0.0.1:8000/category/2/
+
+### Update a Category
+PATCH http://127.0.0.1:8000/category/4/
+Content-Type: application/json
+
+{
+    "name" : "Cup Cake"
+}
+
+### Delete a Category
+DELETE http://127.0.0.1:8000/category/2/
+
+### Get all Shape
+GET http://127.0.0.1:8000/shape/
+
+### Create a shape
+POST http://127.0.0.1:8000/shape/
+Content-Type: application/json
+
+{
+    "name" : "Star"
+}
+
+### Retrieve a Shape
+GET http://127.0.0.1:8000/shape/2/
+
+### Update a Shape
+PATCH http://127.0.0.1:8000/shape/3/
+Content-Type: application/json
+
+{
+    "name" : "Rhombus"
+}
+
+### Delete a Category
+DELETE http://127.0.0.1:8000/shape/3/
+
+### Get all Weight
+GET http://127.0.0.1:8000/weight/
+
+### Create a Weight
+POST http://127.0.0.1:8000/weight/
+Content-Type: application/json
+
+{
+    "name" : "2 kg"
+}
+
+### Retrieve a Weight
+GET http://127.0.0.1:8000/weight/2/
+
+### Update a Weight
+PATCH http://127.0.0.1:8000/weight/3/
+Content-Type: application/json
+
+{
+    "name" : "3 kg"
+}
+
+### Delete a Weight
+DELETE http://127.0.0.1:8000/weight/3/
+
+
+### user creation
+
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username":"ramu7978@mailinator.com",
+    "first_name":"Ramu"
+}
+
